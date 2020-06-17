@@ -1,7 +1,10 @@
 <?php
 require_once "../config/config.php";
-// require_once "../public/scripts/myjs.js";
+require_once "../src/templates/addnewForm.html";
+
 // require_once ("../src/templates/header.php");
+// require_once "../public/scripts/myjs.js";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -22,7 +25,6 @@ if ($result->num_rows > 0) {
      echo "<tr><td>" . $row["id"]. "</td>" . "<td>" . $row["name"]. "</td>" . "<td>" . $row["address"]. "</td>" . "<td>" . $row["salary"].  "</td>" . "<td><a class='edit' title='Edit' data-toggle='tooltip'><i class='glyphicon glyphicon-pencil'>Edit;</i></a>
       <a class='delete' title='Delete' data-toggle='tooltip'><i class='glyphicon glyphicon-trash'>Delete;</i></a>
         </td>";
-  
   }
   echo "</table>";
 } else {
