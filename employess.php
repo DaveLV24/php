@@ -23,11 +23,16 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
       $id = $row["id"];
+      $name = $row["name"];
+      $address = $row["address"];
+      $salary = $row["salary"];
      echo "<tr><td>" . $row["id"]. "</td>" . "<td>" . $row["name"]. "</td>" . "<td>" . $row["address"]. "</td>" . "<td>" . $row["salary"].  "</td>" . "<td>
-     <a class='edit' title='Edit' data-toggle='tooltip'><i class='glyphicon glyphicon-pencil'>Edit;</i></a>
+
     <form action='deleteEmployee.php' method='post'> <button type='submit' name='deleteE' value='$id'> X</button></form></td>";
   }
   echo "</table>";
 } else {
   echo "0 results";
 }
+   
+// edit code for later  <form action='editEmployee.php' method='post'><input name='eName' value='$name'> <input name='eAddress' value='$address'> <input name='esalary' value='$salary'>  <button type='submit' name='edit' value='$id'> Edit</button></form>
