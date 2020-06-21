@@ -16,6 +16,8 @@ if ($conn->connect_error) {
 // echo "Connected successfully";
 
 
+
+
 $sql = "SELECT id, name, address, salary FROM employees";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -52,8 +54,8 @@ if ($result->num_rows > 0) {
                             <form action='deleteEmployee.php' method='post'>
                                     <button type='submit' name='deleteE' class='btn btn-danger btn-xs' value='$id'> X </button>
                             </form>
-                            <form action='index.php' method='post'>
-                                    <button type='submit' name='editT' class='btn btn-info btn-xs' value='$id'> EDIT </button>
+                            <form action='editEmployee.php?id=$id' method='post'>
+                                    <button type='submit' name='editT' class='btn btn-info btn-xs'>EDIT</button>
                             </form>
 
                 </tr>
@@ -63,4 +65,4 @@ if ($result->num_rows > 0) {
 } else {
   echo "no results to show";
 }
-   
+  

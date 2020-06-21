@@ -9,11 +9,11 @@ if ($conn->connect_error) {
 };
 
 
-$employName = $_POST['employName'];
-$employAdress = $_POST['employadress'];
-$employSalary = $_POST['employsalary'];
+$name = $_POST['name'];
+$address = $_POST['address'];
+$salary = $_POST['salary'];
 $stmt = $conn->prepare("INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)");
-$stmt->bind_param("sss", $employName, $employAdress, $employSalary);
+$stmt->bind_param("sss", $name, $address, $salary);
 $stmt->execute();
 header("Location: /index.php");
 
