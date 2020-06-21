@@ -3,7 +3,6 @@ session_start();
 require_once "../config/config.php";
 require_once "../src/templates/addnewForm.html";
 require_once "../src/templates/header.php";
-// require_once "../public/scripts/myjs.js";
 
 
 // Create connection
@@ -13,8 +12,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-// echo "Connected successfully";
-
 
 
 
