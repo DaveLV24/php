@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
                             <form action='deleteEmployee.php' method='post'>
                                     <button type='submit' name='deleteE' class='btn btn-danger btn-xs' value='$id'> X </button>
                             </form>
-                            <form action='employess.php' method='post'>
+                            <form action='index.php' method='post'>
                                     <button type='submit' name='editT' class='btn btn-info btn-xs' value='$id'> EDIT </button>
                             </form>
 
@@ -64,6 +64,3 @@ if ($result->num_rows > 0) {
   echo "no results to show";
 }
    
-// edit code for later  <form action='editEmployee.php' method='post'><input name='eName' value='$name'> <input name='eAddress' value='$address'> <input name='esalary' value='$salary'>  <button type='submit' name='edit' value='$id'> Edit</button></form>
-
-                

@@ -7,9 +7,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 };
 
+
 $id = $_POST['deleteE'];
 $stmt = $conn->prepare("DELETE FROM `employees` WHERE `employees`.`id`= (?)");
 $stmt->bind_param("d", $id);
 $stmt->execute();
-header("Location: /employess.php");
-echo "record deleted";
+header("Location: /index.php");
+echo "Employee fired";
